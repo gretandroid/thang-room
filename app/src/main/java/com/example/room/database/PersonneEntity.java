@@ -19,13 +19,13 @@ public class PersonneEntity {
     public PersonneEntity() {
     }
 
+    @Ignore
     public PersonneEntity(int id, Date date, String nom) {
         this.id = id;
         this.date = date;
         this.nom = nom;
     }
 
-    @Ignore
     public PersonneEntity(Date date, String nom) {
         this.date = date;
         this.nom = nom;

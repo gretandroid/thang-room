@@ -103,19 +103,19 @@ public class DatabaseTest {
         Assert.assertEquals("nom3", person.getNom());
     }
 
-    @Test
-    public void getAllLiveData() {
-        dao.insertAll(TestData.getAll());
-        LiveData<List<PersonneEntity>> allPersonsLiveData = dao.getAllLiveData();
-        Assert.assertEquals(4, allPersonsLiveData.getValue().size());
-    }
+//    @Test
+//    public void getAllLiveData() {
+//        dao.insertAll(TestData.getAll());
+//        LiveData<List<PersonneEntity>> allPersonsLiveData = dao.getAllLiveData();
+//        Assert.assertEquals(4, allPersonsLiveData.getValue().size());
+//    }
 
-    @Test
-    public void getAll() {
-        dao.insertAll(TestData.getAll());
-        List<PersonneEntity> allPersons = dao.getAll();
-        Assert.assertEquals(4, allPersons.size());
-    }
+//    @Test
+//    public void getAll() {
+//        dao.insertAll(TestData.getAll());
+//        List<PersonneEntity> allPersons = dao.getAll();
+//        Assert.assertEquals(4, allPersons.size());
+//    }
 
     @Test
     public void deleteAll() {

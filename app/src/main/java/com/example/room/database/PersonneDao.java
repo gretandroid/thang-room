@@ -25,12 +25,12 @@ public interface PersonneDao {
     @Query("SELECT * FROM person WHERE id=:id")
     PersonneEntity getPersonneById(int id);
 
-    default LiveData<List<PersonneEntity>> getAllLiveData() {
-        return new MutableLiveData<>(getAll());
-    }
+//    default LiveData<List<PersonneEntity>> getAllLiveData() {
+//        return new MutableLiveData<>(getAll());
+//    }
 
     @Query("SELECT * FROM person ORDER BY date DESC")
-    List<PersonneEntity> getAll();
+    LiveData<List<PersonneEntity>> getAll();
 
     @Query("DELETE FROM person")
     int deleteAll();
